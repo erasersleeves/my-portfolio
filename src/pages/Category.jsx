@@ -26,14 +26,14 @@ export default function Category() {
     return (
       <div className="container">
         <p>Category not found.</p>
-        <Link to="/" className="backlink">← Back home</Link>
+        <Link to="/" className="backlink">← Back</Link>
       </div>
     );
   }
 
   return (
     <div className="container">
-      <Link to="/" className="backlink">← Back home</Link>
+      <Link to="/" className="backlink">← Back</Link>
 
       <div className="categoryHeader">
         <h2 className="categoryTitle">{category.title}</h2>

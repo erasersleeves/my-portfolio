@@ -4,9 +4,24 @@ const base = import.meta.env.BASE_URL;
 // paths are relative to /public
 export const artworksByCategory = {
   illustrations: [
-    { src: `${base}art/illustrations/01.jpg`, alt: "Illustration 01" },
-    { src: `${base}art/illustrations/02.jpg`, alt: "Illustration 02" },
-    { src: `${base}art/illustrations/03.jpg`, alt: "Illustration 03" },
+    { src: `${base}art/illustrations/00.jpg`, alt: ":" },
+    { src: `${base}art/illustrations/08.jpg`, alt: ":" },
+    { src: `${base}art/illustrations/17.jpg`, alt: ":" },
+    { src: `${base}art/illustrations/15.jpg`, alt: ":" },
+    { src: `${base}art/illustrations/13.jpg`, alt: ":" },
+    { src: `${base}art/illustrations/02.jpg`, alt: ":" },
+    { src: `${base}art/illustrations/03.jpg`, alt: ":" },
+    { src: `${base}art/illustrations/04.jpg`, alt: ":" },
+    { src: `${base}art/illustrations/09.jpg`, alt: ":" },
+    { src: `${base}art/illustrations/06.jpg`, alt: ":" },
+    { src: `${base}art/illustrations/07.jpg`, alt: ":" },
+    { src: `${base}art/illustrations/10.jpg`, alt: ":" },
+    { src: `${base}art/illustrations/11.jpg`, alt: ":" },
+    { src: `${base}art/illustrations/12.jpg`, alt: ":" },
+    { src: `${base}art/illustrations/05.jpg`, alt: ":" },
+    { src: `${base}art/illustrations/16.jpg`, alt: ":" },
+    { src: `${base}art/illustrations/14.jpg`, alt: ":" },
+    { src: `${base}art/illustrations/18.jpg`, alt: ":" },
   ],
 
   whiteboard: [
@@ -15,7 +30,33 @@ export const artworksByCategory = {
   ],
 
   sketchbook: [
-    { src: `${base}art/sketchbook/01.jpg`, alt: "Sketchbook 01" },
+    { src: `${base}art/sketchbook/03.jpg`, alt: "" },
+    { src: `${base}art/sketchbook/01.jpg`, alt: "" },
+    { src: `${base}art/sketchbook/02.jpg`, alt: "" },
+    { src: `${base}art/sketchbook/04.jpg`, alt: "" },
+    { src: `${base}art/sketchbook/05.jpg`, alt: "" },
+    { src: `${base}art/sketchbook/06.jpg`, alt: "" },
+    { src: `${base}art/sketchbook/07.jpg`, alt: "" },
+    { src: `${base}art/sketchbook/08.jpg`, alt: "" },
+    { src: `${base}art/sketchbook/09.jpg`, alt: "" },
+    { src: `${base}art/sketchbook/00.jpg`, alt: "" },
+
+    { src: `${base}art/sketchbook/10.jpg`, alt: "" },
+    { src: `${base}art/sketchbook/11.jpg`, alt: "" },
+    { src: `${base}art/sketchbook/12.jpg`, alt: "" },
+    { src: `${base}art/sketchbook/13.jpg`, alt: "" },
+    { src: `${base}art/sketchbook/14.jpg`, alt: "" },
+    { src: `${base}art/sketchbook/15.jpg`, alt: "" },
+    { src: `${base}art/sketchbook/16.jpg`, alt: "" },
+    { src: `${base}art/sketchbook/17.jpg`, alt: "" },
+    { src: `${base}art/sketchbook/18.jpg`, alt: "" },
+    { src: `${base}art/sketchbook/19.jpg`, alt: "" },
+
+    { src: `${base}art/sketchbook/20.jpg`, alt: "" },
+    { src: `${base}art/sketchbook/21.jpg`, alt: "" },
+    { src: `${base}art/sketchbook/22.jpg`, alt: "" },
+    { src: `${base}art/sketchbook/23.jpg`, alt: "" },
+    { src: `${base}art/sketchbook/24.jpg`, alt: "" },
   ],
 
   "wip": [
@@ -28,6 +69,7 @@ export const artworksByCategory = {
     { src: `${base}art/wip/07.jpg`, alt: "" },
     { src: `${base}art/wip/08.jpg`, alt: "" },
     { src: `${base}art/wip/09.jpg`, alt: "" },
+    { src: `${base}art/wip/10.jpg`, alt: "" },
   ],
 
   "notes-practice": [

@@ -7,7 +7,6 @@ export default function Layout({ children }) {
         <div className="header__inner">
           <Link to="/" className="brand">
             <div className="brand__name">Yacine Benmeziane</div>
-            <div className="brand__tag">My 2D World</div>
           </Link>
 
           <nav className="nav">
