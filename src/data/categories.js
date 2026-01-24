@@ -4,7 +4,7 @@ export const categories = [
   { title: "Illustrations", slug: "illustrations", cover: `${base}tiles/illustrations.jpg` },
   { title: "Glow Art", slug: "glow-art", cover: `${base}tiles/glow-art.jpg` },
   { title: "Sketchbook", slug: "sketchbook", cover: `${base}tiles/sketchbook.jpg` },
-  { title: "Whiteboard", slug: "whiteboard", cover: `${base}tiles/whiteboard.jpg` },
-  { title: "Notes / Practice", slug: "notes-practice", cover: `${base}tiles/notes-practice.jpg` },
+  { title: "Classroom", slug: "classroom", cover: `${base}tiles/classroom.jpg` },
+  { title: "Archive", slug: "archive", cover: `${base}tiles/archive.jpg` },
   { title: "WIP", slug: "wip", cover: `${base}tiles/wip.jpg` },
 ];

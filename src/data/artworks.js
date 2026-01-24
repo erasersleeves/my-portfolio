@@ -24,15 +24,27 @@ export const artworksByCategory = {
     { src: `${base}art/illustrations/18.jpg`, alt: ":" },
   ],
 
-  whiteboard: [
-    { src: `${base}art/whiteboard/01.jpg`, alt: "Whiteboard 01" },
-    { src: `${base}art/whiteboard/02.jpg`, alt: "Whiteboard 02" },
+  classroom: [
+    { src: `${base}art/classroom/06.jpg`, alt: "" },
+    { src: `${base}art/classroom/04.jpg`, alt: "" },
+    { src: `${base}art/classroom/05.jpg`, alt: "" },
+    { src: `${base}art/classroom/00.jpg`, alt: "" },
+    { src: `${base}art/classroom/01.jpg`, alt: "" },
+    { src: `${base}art/classroom/02.jpg`, alt: "" },
+    { src: `${base}art/classroom/03.jpg`, alt: "" },
+    { src: `${base}art/classroom/07.jpg`, alt: "" },
+    { src: `${base}art/classroom/08.jpg`, alt: "" },
+    { src: `${base}art/classroom/09.jpg`, alt: "" },
+    { src: `${base}art/classroom/10.jpg`, alt: "" },
+    { src: `${base}art/classroom/11.jpg`, alt: "" },
+    { src: `${base}art/classroom/12.jpg`, alt: "" },
   ],
 
   sketchbook: [
     { src: `${base}art/sketchbook/03.jpg`, alt: "" },
     { src: `${base}art/sketchbook/01.jpg`, alt: "" },
     { src: `${base}art/sketchbook/02.jpg`, alt: "" },
+    { src: `${base}art/sketchbook/25.jpg`, alt: "" },
     { src: `${base}art/sketchbook/04.jpg`, alt: "" },
     { src: `${base}art/sketchbook/05.jpg`, alt: "" },
     { src: `${base}art/sketchbook/06.jpg`, alt: "" },
@@ -72,8 +84,17 @@ export const artworksByCategory = {
     { src: `${base}art/wip/10.jpg`, alt: "" },
   ],
 
-  "notes-practice": [
-    { src: `${base}art/notes-practice/01.jpg`, alt: "Notes / Practice 01" },
+  "archive": [
+    { src: `${base}art/archive/01.jpg`, alt: "" },
+    { src: `${base}art/archive/08.jpg`, alt: "" },
+    { src: `${base}art/archive/02.jpg`, alt: "" },
+    { src: `${base}art/archive/03.jpg`, alt: "" },
+    { src: `${base}art/archive/04.jpg`, alt: "" },
+    { src: `${base}art/archive/05.jpg`, alt: "" },
+    { src: `${base}art/archive/06.jpg`, alt: "" },
+    { src: `${base}art/archive/07.jpg`, alt: "" },
+    { src: `${base}art/archive/09.jpg`, alt: "" },
+    { src: `${base}art/archive/10.jpg`, alt: "" },
   ],
 
   "glow-art": [
@@ -85,5 +106,7 @@ export const artworksByCategory = {
     { src: `${base}art/glow-art/05.jpg`, alt: "Orihime stan" },
     { src: `${base}art/glow-art/06.jpg`, alt: "Natsu" },
     { src: `${base}art/glow-art/07.jpg`, alt: "Rikka" },
+    { src: `${base}art/glow-art/08.jpg`, alt: "Yato" },
+    { src: `${base}art/glow-art/09.jpg`, alt: "Rudy" },
   ],
 };
