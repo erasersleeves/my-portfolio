@@ -27,6 +27,13 @@ export const artworksByCategory = {
   ],
 
   "glow-art": [
-    { src: `${base}art/glow-art/01.jpg`, alt: "Glow Art 01" },
+    { src: `${base}art/glow-art/00.jpg`, alt: "Kaguya" },
+    { src: `${base}art/glow-art/01.jpg`, alt: "Sugaku" },
+    { src: `${base}art/glow-art/02.jpg`, alt: "Tomioka" },
+    { src: `${base}art/glow-art/03.jpg`, alt: "Isagi/Nagi" },
+    { src: `${base}art/glow-art/04.jpg`, alt: "Fuyukai Desu!" },
+    { src: `${base}art/glow-art/05.jpg`, alt: "Orihime stan" },
+    { src: `${base}art/glow-art/06.jpg`, alt: "Natsu" },
+    { src: `${base}art/glow-art/07.jpg`, alt: "Rikka" },
   ],
 };
