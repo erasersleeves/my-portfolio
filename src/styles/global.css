@@ -486,3 +486,90 @@ a { color: inherit; text-decoration: none; }
 @media (prefers-reduced-motion: reduce) {
   .masonryItem { transition: none; }
 }
+
+/* Covers page */
+.coversGrid {
+  margin-top: 18px;
+  display: grid;
+  gap: 14px;
+  grid-template-columns: repeat(12, 1fr);
+}
+
+/* Desktop: 2 landscape cards side-by-side; portrait card slimmer */
+@media (min-width: 900px) {
+  .coverCard { grid-column: span 6; }
+  .coverCard--portrait { grid-column: span 4; }
+}
+
+/* Tablet: 2 columns */
+@media (min-width: 560px) and (max-width: 899px) {
+  .coverCard { grid-column: span 6; }
+  .coverCard--portrait { grid-column: span 6; }
+}
+
+/* Mobile: 1 column */
+@media (max-width: 559px) {
+  .coverCard { grid-column: span 12; }
+}
+
+.coverCard {
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  overflow: hidden;
+  background: rgba(18, 18, 20, 0.55);
+  box-shadow: var(--shadow);
+}
+
+/* Landscape default ratio */
+.coverCard:not(.coverCard--portrait) .coverIframe {
+  aspect-ratio: 16 / 9;
+}
+
+/* Portrait ratio */
+.coverCard--portrait .coverIframe {
+  aspect-ratio: 9 / 16;
+}
+
+.coverIframe {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Covers page layout (no gaps) */
+.coversLayout {
+  margin-top: 18px;
+  display: grid;
+  gap: 14px;
+  grid-template-columns: 1fr;
+}
+
+@media (min-width: 900px) {
+  .coversLayout {
+    grid-template-columns: 1fr 0.65fr; /* right col slightly slimmer */
+    align-items: start;
+  }
+}
+
+.coversCol {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.coverCard {
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  overflow: hidden;
+  background: rgba(18, 18, 20, 0.55);
+  box-shadow: var(--shadow);
+}
+
+.coverCard--landscape .coverIframe { aspect-ratio: 16 / 9; }
+.coverCard--portrait .coverIframe { aspect-ratio: 9 / 16; }
+
+.coverIframe {
+  width: 100%;
+  height: auto;
+  display: block;
+}

@@ -5,6 +5,8 @@ import Category from "./pages/Category";
 import Manga from "./pages/Manga";
 import About from "./pages/About";
 import Photography from "./pages/Photography";
+import Covers from "./pages/Covers";
+
 
 
 
@@ -17,6 +19,7 @@ export default function App() {
         <Route path="/manga" element={<Manga />} />
         <Route path="/about" element={<About />} />
         <Route path="/photography" element={<Photography />} />
+        <Route path="/covers" element={<Covers />} />
         <Route path="*" element={<Navigate to="/" replace />} />
       </Routes>
     </Layout>

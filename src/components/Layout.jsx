@@ -19,6 +19,12 @@ export default function Layout({ children }) {
             >
               Manga
             </NavLink>
+            <NavLink
+              to="/covers"
+              className={({ isActive }) => (isActive ? "nav__link isActive" : "nav__link")}
+            >
+              Covers
+            </NavLink>
 
             <NavLink
               to="/photography"
