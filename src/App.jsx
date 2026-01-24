@@ -3,6 +3,8 @@ import Layout from "./components/Layout";
 import Home from "./pages/Home";
 import Category from "./pages/Category";
 import Manga from "./pages/Manga";
+import About from "./pages/About";
+
 
 
 export default function App() {
@@ -12,6 +14,7 @@ export default function App() {
         <Route path="/" element={<Home />} />
         <Route path="/art/:slug" element={<Category />} />
         <Route path="/manga" element={<Manga />} />
+        <Route path="/about" element={<About />} />
         <Route path="*" element={<Navigate to="/" replace />} />
       </Routes>
     </Layout>
