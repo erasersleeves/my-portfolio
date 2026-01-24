@@ -18,8 +18,16 @@ export const artworksByCategory = {
     { src: `${base}art/sketchbook/01.jpg`, alt: "Sketchbook 01" },
   ],
 
-  "digital-sketches": [
-    { src: `${base}art/digital-sketches/01.jpg`, alt: "Digital Sketch 01" },
+  "wip": [
+    { src: `${base}art/wip/01.jpg`, alt: "" },
+    { src: `${base}art/wip/02.jpg`, alt: "" },
+    { src: `${base}art/wip/03.jpg`, alt: "" },
+    { src: `${base}art/wip/04.jpg`, alt: "" },
+    { src: `${base}art/wip/05.jpg`, alt: "" },
+    { src: `${base}art/wip/06.jpg`, alt: "" },
+    { src: `${base}art/wip/07.jpg`, alt: "" },
+    { src: `${base}art/wip/08.jpg`, alt: "" },
+    { src: `${base}art/wip/09.jpg`, alt: "" },
   ],
 
   "notes-practice": [

@@ -5,12 +5,12 @@ export default function Home() {
   return (
     <div className="container">
       <section className="hero">
-        <h1 className="hero__title">Welcome To</h1>
-        <div className="hero__headline">My 2D World</div>
+        <h1 className="hero__title">Wanderers seeking death,</h1>
+        <div className="hero__headline">Welcome!</div>
         <p className="hero__text">
-          You may find a personal pick of various pieces under different styles.
+          May you find a swift end upon our claws.
           <br />
-          Please enjoy the highlights of my art journey.
+          <i>Mantis Village - Hollow Knight</i>
         </p>
       </section>
 
