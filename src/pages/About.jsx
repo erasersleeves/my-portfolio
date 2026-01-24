@@ -6,7 +6,7 @@ export default function About() {
       {/* Intro */}
       <section className="aboutIntro">
         <h2 className="categoryTitle">About</h2>
-        <p className="aboutText">
+        <p className="categoryHint">
           Hi! I’m Yacine. Welcome to my little corner of the internet.
           <br />
           I post art, projects, and a bit of gaming content. Feel free to explore!

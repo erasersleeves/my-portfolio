@@ -20,9 +20,13 @@ export default function Layout({ children }) {
               Manga
             </NavLink>
 
-            <a className="nav__link" href="#" onClick={(e) => e.preventDefault()}>
+            <NavLink
+              to="/photography"
+              className={({ isActive }) => (isActive ? "nav__link isActive" : "nav__link")}
+            >
               Photography
-            </a>
+            </NavLink>
+
             <NavLink
               to="/about"
               className={({ isActive }) => (isActive ? "nav__link isActive" : "nav__link")}
