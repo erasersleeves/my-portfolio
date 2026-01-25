@@ -38,7 +38,6 @@ export default function Category() {
       <div className="categoryHeader">
         <h2 className="categoryTitle">{category.title}</h2>
         <p className="categoryHint">
-          Click an image to expand. Use ← → keys to navigate. Esc closes.
         </p>
       </div>
 
