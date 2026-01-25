@@ -66,21 +66,21 @@ export default function About() {
 
       <section className="linkTiles">
         <a className="linkTile" href="https://www.chess.com/member/yacinelakka7" target="_blank" rel="noreferrer">
-          <div className="linkTile__bg" style={{ backgroundImage: `url(${base}about/chess.jpg)` }} />
+          <div className="linkTile__bg" style={{ backgroundImage: `url(${base}about/chess.webp)` }} />
           <div className="linkTile__overlay">
             {/* <div className="linkTile__label">Chess</div> */}
           </div>
         </a>
 
         <a className="linkTile" href="https://psnprofiles.com/erasersleeves" target="_blank" rel="noreferrer">
-          <div className="linkTile__bg" style={{ backgroundImage: `url(${base}about/playstation.jpg)` }} />
+          <div className="linkTile__bg" style={{ backgroundImage: `url(${base}about/playstation.webp)` }} />
           <div className="linkTile__overlay">
             
           </div>
         </a>
 
         <a className="linkTile" href="https://steamcommunity.com/id/yacinejeager/" target="_blank" rel="noreferrer">
-          <div className="linkTile__bg" style={{ backgroundImage: `url(${base}about/steam.jpg)` }} />
+          <div className="linkTile__bg" style={{ backgroundImage: `url(${base}about/steam.webp)` }} />
           <div className="linkTile__overlay">
             {/* <div className="linkTile__label">Steam</div> */}
           </div>
