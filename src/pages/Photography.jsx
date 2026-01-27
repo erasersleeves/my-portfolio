@@ -1,10 +1,30 @@
-import { useState, useCallback } from "react";
+import { useEffect, useMemo, useState, useCallback } from "react";
 import { photos } from "../data/photography";
 import Lightbox from "../components/Lightbox";
+
+function getColCount(width) {
+  if (width >= 900) return 3;
+  if (width >= 560) return 2;
+  return 1;
+}
 
 export default function Photography() {
   const [openIndex, setOpenIndex] = useState(null);
   const isOpen = openIndex !== null;
+
+  const [colCount, setColCount] = useState(getColCount(window.innerWidth));
+
+  useEffect(() => {
+    const onResize = () => setColCount(getColCount(window.innerWidth));
+    window.addEventListener("resize", onResize);
+    return () => window.removeEventListener("resize", onResize);
+  }, []);
+
+  const columns = useMemo(() => {
+    const cols = Array.from({ length: colCount }, () => []);
+    photos.forEach((p, idx) => cols[idx % colCount].push({ ...p, idx }));
+    return cols;
+  }, [colCount]);
 
   const close = useCallback(() => setOpenIndex(null), []);
   const prev = useCallback(() => {
@@ -29,16 +49,26 @@ export default function Photography() {
           Add images in <b>public/photography/</b> and list them in <b>src/data/photography.js</b>.
         </div>
       ) : (
-        <div className="masonry">
-          {photos.map((p, idx) => (
-            <button
-              key={p.src}
-              className="masonryItem"
-              onClick={() => setOpenIndex(idx)}
-              aria-label={`Open photo ${idx + 1}`}
-            >
-              <img className="masonryImg" src={p.src} alt={p.alt || ""} loading="lazy" />
-            </button>
+        <div className="masonryCols">
+          {columns.map((col, c) => (
+            <div className="masonryCol" key={c}>
+              {col.map((p) => (
+                <button
+                  key={p.src}
+                  className="masonryItem"
+                  onClick={() => setOpenIndex(p.idx)}
+                  aria-label={`Open photo ${p.idx + 1}`}
+                >
+                  <img
+                    className="masonryImg"
+                    src={p.src}
+                    alt={p.alt || ""}
+                    loading="lazy"
+                    decoding="async"
+                  />
+                </button>
+              ))}
+            </div>
           ))}
         </div>
       )}
