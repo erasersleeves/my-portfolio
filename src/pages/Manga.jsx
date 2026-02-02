@@ -20,9 +20,10 @@ export default function Manga() {
         />
       </div>
 
-      <p><b>Art:</b> Yacine Benmeziane
+      <p><b>Art:</b> Yacine Benmeziane <a href="https://instagram.com/eraser.sleeves">@eraser.sleeves</a>
         <br /><b>Shading:</b> Yacine Benmeziane and Daho <a href="https://instagram.com/daho_sen">@daho_sen</a>
         <br /><b>Story:</b> B.A.
+        <br /><b>Date of release:</b> February 2024
       </p>
     </div>
   );

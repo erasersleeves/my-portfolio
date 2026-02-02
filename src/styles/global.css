@@ -41,7 +41,7 @@ a { color: inherit; text-decoration: none; }
 }
 
 .brand { display: flex; flex-direction: column; }
-.brand__name { font-weight: 650; letter-spacing: 0.2px; font-size: larger;}
+.brand__name { font-weight: 500; letter-spacing: 0.2px; font-size: larger; font-family: ;}
 .brand__tag { font-size: 12px; color: var(--muted); margin-top: 2px; }
 
 .nav { display: flex; gap: 14px; flex-wrap: wrap; justify-content: flex-end; }
@@ -575,4 +575,108 @@ a { color: inherit; text-decoration: none; }
   width: 100%;
   height: auto;
   display: block;
+}
+
+/* ===== Mobile drawer navigation ===== */
+
+/* Hide desktop nav on mobile, show hamburger */
+.nav--desktop { display: none; }
+.menuBtn {
+  display: inline-grid;
+  gap: 5px;
+  width: 44px;
+  height: 44px;
+  border-radius: 12px;
+  border: 1px solid var(--line);
+  background: rgba(18, 18, 20, 0.55);
+  cursor: pointer;
+  place-content: center;
+}
+
+.menuBtn__bar {
+  width: 18px;
+  height: 2px;
+  background: var(--text);
+  border-radius: 999px;
+}
+
+/* Desktop: show nav, hide hamburger */
+@media (min-width: 820px) {
+  .nav--desktop { display: flex; }
+  .menuBtn { display: none; }
+}
+
+/* Backdrop layer */
+.drawerLayer {
+  position: fixed;
+  inset: 0;
+  z-index: 999;
+  background: rgba(0,0,0,0.55);
+  backdrop-filter: blur(4px);
+}
+
+/* Right-side drawer */
+.drawer {
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 100%;
+  width: min(320px, 86vw);
+  background: rgba(11, 11, 12, 0.92);
+  border-left: 1px solid var(--line);
+  box-shadow: var(--shadow);
+  padding: 14px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+
+  animation: drawerIn 180ms ease-out;
+}
+
+@keyframes drawerIn {
+  from { transform: translateX(12px); opacity: 0.6; }
+  to   { transform: translateX(0); opacity: 1; }
+}
+
+.drawer__top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.drawer__title {
+  font-weight: 700;
+  letter-spacing: 0.2px;
+}
+
+.drawer__close {
+  width: 40px;
+  height: 40px;
+  border-radius: 12px;
+  border: 1px solid var(--line);
+  background: rgba(18, 18, 20, 0.65);
+  color: var(--text);
+  cursor: pointer;
+}
+
+/* Stack links nicely */
+.drawer__nav {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+/* Make drawer links feel like buttons */
+.drawer__nav .nav__link {
+  display: block;
+  padding: 12px 12px;
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  background: rgba(18, 18, 20, 0.35);
+}
+
+/* Keep hover subtle on touch devices */
+.drawer__nav .nav__link:hover {
+  transform: none;
 }

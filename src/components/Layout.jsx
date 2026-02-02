@@ -1,48 +1,85 @@
 import { Link, NavLink } from "react-router-dom";
+import { useEffect, useState } from "react";
+
+const navClass = ({ isActive }) => (isActive ? "nav__link isActive" : "nav__link");
 
 export default function Layout({ children }) {
+  const [menuOpen, setMenuOpen] = useState(false);
+
+  // Close on route change (when a link is clicked)
+  const close = () => setMenuOpen(false);
+
+  // ESC to close
+  useEffect(() => {
+    const onKey = (e) => {
+      if (e.key === "Escape") setMenuOpen(false);
+    };
+    document.addEventListener("keydown", onKey);
+    return () => document.removeEventListener("keydown", onKey);
+  }, []);
+
+  // Prevent background scroll when menu is open
+  useEffect(() => {
+    document.body.style.overflow = menuOpen ? "hidden" : "";
+    return () => {
+      document.body.style.overflow = "";
+    };
+  }, [menuOpen]);
+
   return (
     <div className="page">
       <header className="header">
         <div className="header__inner">
-          <Link to="/" className="brand">
+          <Link to="/" className="brand" onClick={close}>
             <div className="brand__name">Yacine Benmeziane</div>
+            {/* <div className="brand__tag">My 2D World</div> */}
           </Link>
 
-          <nav className="nav">
-            <NavLink to="/" className={({ isActive }) => (isActive ? "nav__link isActive" : "nav__link")}>
-              Portfolio
-            </NavLink>
-            <NavLink
-              to="/manga"
-              className={({ isActive }) => (isActive ? "nav__link isActive" : "nav__link")}
-            >
-              Manga
-            </NavLink>
-            <NavLink
-              to="/covers"
-              className={({ isActive }) => (isActive ? "nav__link isActive" : "nav__link")}
-            >
-              Covers
-            </NavLink>
-
-            <NavLink
-              to="/photography"
-              className={({ isActive }) => (isActive ? "nav__link isActive" : "nav__link")}
-            >
-              Photography
-            </NavLink>
-
-            <NavLink
-              to="/about"
-              className={({ isActive }) => (isActive ? "nav__link isActive" : "nav__link")}
-            >
-              About
-            </NavLink>
-
+          {/* Desktop nav */}
+          <nav className="nav nav--desktop">
+            <NavLink to="/" className={navClass}>Portfolio</NavLink>
+            <NavLink to="/manga" className={navClass}>Manga</NavLink>
+            <NavLink to="/covers" className={navClass}>Covers</NavLink>
+            <NavLink to="/photography" className={navClass}>Photography</NavLink>
+            <NavLink to="/about" className={navClass}>About</NavLink>
           </nav>
+
+          {/* Mobile hamburger */}
+          <button
+            className="menuBtn"
+            type="button"
+            aria-label="Open menu"
+            aria-expanded={menuOpen}
+            onClick={() => setMenuOpen(true)}
+          >
+            <span className="menuBtn__bar" />
+            <span className="menuBtn__bar" />
+            <span className="menuBtn__bar" />
+          </button>
         </div>
       </header>
+
+      {/* Mobile drawer + backdrop */}
+      {menuOpen ? (
+        <div className="drawerLayer" onClick={close}>
+          <aside className="drawer" onClick={(e) => e.stopPropagation()}>
+            <div className="drawer__top">
+              <div className="drawer__title">Menu</div>
+              <button className="drawer__close" onClick={close} aria-label="Close menu">
+                ✕
+              </button>
+            </div>
+
+            <nav className="drawer__nav">
+              <NavLink to="/" className={navClass} onClick={close}>Portfolio</NavLink>
+              <NavLink to="/manga" className={navClass} onClick={close}>Manga</NavLink>
+              <NavLink to="/covers" className={navClass} onClick={close}>Covers</NavLink>
+              <NavLink to="/photography" className={navClass} onClick={close}>Photography</NavLink>
+              <NavLink to="/about" className={navClass} onClick={close}>About</NavLink>
+            </nav>
+          </aside>
+        </div>
+      ) : null}
 
       <main className="main">{children}</main>
 
