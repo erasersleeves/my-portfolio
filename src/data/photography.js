@@ -45,5 +45,7 @@ export const photos = [
     { src: `${base}photography/41.webp`, alt: "" },
     { src: `${base}photography/42.webp`, alt: "" },
     { src: `${base}photography/43.webp`, alt: "" },
-    { src: `${base}photography/44.webp`, alt: "" }
+    { src: `${base}photography/44.webp`, alt: "" },
+    { src: `${base}photography/45.webp`, alt: "" },
+    { src: `${base}photography/46.webp`, alt: "" }
 ];
